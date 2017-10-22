@@ -1,0 +1,32 @@
+{
+  "name": "biometridon-api",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "NODE_ENV=development nodemon ./index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@koa/cors": "^2.2.1",
+    "bcryptjs": "^2.4.3",
+    "dotenv": "^4.0.0",
+    "koa": "^2.3.0",
+    "koa-bodyparser": "^4.2.0",
+    "koa-conditional-get": "^2.0.0",
+    "koa-etag": "^3.0.0",
+    "koa-helmet": "^3.2.0",
+    "koa-morgan": "^1.0.1",
+    "koa-router": "^7.2.1",
+    "koa-server-push": "^0.1.0",
+    "mongoose": "^4.12.4",
+    "uws": "^8.14.1",
+    "winston": "^2.4.0"
+  },
+  "devDependencies": {
+    "nodemon": "^1.12.1"
+  }
+}
