@@ -16,7 +16,7 @@ const api = require('./api')
 
 const app = new Koa()
 
-const  bootApplication = app => {
+const bootApplication = app => {
   applyMiddlwares(app)
 
   // handle errors
