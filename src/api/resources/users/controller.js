@@ -1,19 +1,21 @@
 const Responder = require('./../../../helpers/responder')
 const logger = require('./../../../helpers/logger')
-const User = require('./models/User')
+const {UnauthorizedError} = require('./../../../helpers/errors')
 
-logger.debug(new Responder())
+// database models
+const User = require('./models/User')
 
 class UserController {
   async list (ctx) {
-    const response = new Responder()
+    throw new UnauthorizedError()
+    // const response = new Responder()
 
-    const result = await User.find({})
-      .select('-password')
+    // const result = await User.find({})
+    //   .select('-password')
 
-    ctx.body = response
-      .data(result)
-      .json()
+    // ctx.body = response
+    //   .data(result)
+    //   .json()
   }
 
   async create (ctx) {
