@@ -11,10 +11,10 @@ router.get('/', ctx => {
   ctx.body = {
     message: 'BiometridOn API',
     version
-   }
+  }
 })
 
 // users resource routing
-router.use(users.routes())
+router.use(users.router)
 
 module.exports = router
