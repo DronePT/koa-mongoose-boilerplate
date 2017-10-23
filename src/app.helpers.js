@@ -1,4 +1,7 @@
+const logger = require('./helpers/logger')
 const Responder = require('./helpers/responder')
+
+const { NODE_ENV } = process.env
 
 exports.handleErrors = async (ctx, next) => {
   try {
