@@ -15,11 +15,11 @@ const schema = new Schema({
 
 // password hasher
 const hashPassword = function (next) {
-  const { password } = this
-
-  const salt = bcrypt.genSaltSync(parseInt(SALT_ROUNDS || 10))
-
-  this.password = bcrypt.hashSync(password, salt)
+  if (this.password && this.isModified('password')) {
+    const { password } = this
+    const salt = bcrypt.genSaltSync(parseInt(SALT_ROUNDS || 10))
+    this.password = bcrypt.hashSync(password, salt)
+  }
 
   next()
 }
