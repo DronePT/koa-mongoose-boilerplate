@@ -1,11 +1,4 @@
 class Responder {
-  constructor () {
-    // this._status = undefined
-    // this._data = undefined
-    // this._error = undefined
-    // this._metadata = undefined
-  }
-
   data (data) {
     this._status = 'ok'
     this._data = data
