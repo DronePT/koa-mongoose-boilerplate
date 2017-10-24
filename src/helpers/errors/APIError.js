@@ -5,7 +5,9 @@ module.exports = class APIError extends Error {
     code = 0,
     expose = true
   ) {
-    super(message)
+    super(message.message || message)
+
+    if (typeof message === 'object') this.data = message
 
     this.name = this.constructor.name
     this.status = status

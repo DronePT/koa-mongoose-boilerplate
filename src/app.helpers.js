@@ -10,13 +10,11 @@ exports.handleErrors = async (ctx, next) => {
     const response = new Responder()
     const status = err.status || 500
 
-    if (status === 500) logger.error(err)
+    if (status === 500) logger.error({ error: err, context: ctx })
 
     const data = status === 500 && NODE_ENV === 'production'
       ? { message: 'Internal Server Error' }
-      : typeof err.message === 'string'
-        ? { message: err.message }
-        : err.message
+      : err.data || err.message
 
     ctx.status = status
 
