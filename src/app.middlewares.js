@@ -9,7 +9,16 @@ const morgan = require('koa-morgan')
 const { NODE_ENV } = process.env
 const MORGAN_LOG_TYPE = NODE_ENV === 'development' ? 'dev' : 'combined'
 
+const responseTime = () => async (ctx, next) => {
+  const start = Date.now()
+  await next()
+  const duration = Math.ceil(Date.now() - start)
+  ctx.set('X-Response-Time', `${duration}ms`)
+}
+
 module.exports = (app) => {
+  app.use(responseTime())
+
   // Specifically for adding HTTP2 Server Push headers for HTTP2 clients and proxies
   app.use(serverpush())
   // HTTP CORS configuration
