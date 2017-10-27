@@ -1,13 +1,21 @@
 const Responder = require('./../../../helpers/responder')
 const logger = require('./../../../helpers/logger')
-const {UnauthorizedError} = require('./../../../helpers/errors')
+const {
+  APIError,
+  UnauthorizedError,
+  NotFoundError,
+  BadRequestError,
+  ForbiddenError
+} = require('./../../../helpers/errors')
 
 // database models
 const User = require('./models/User')
 
 class UserController {
   async list (ctx) {
-    throw new UnauthorizedError()
+    // throw new UnauthorizedError()
+    throw new ForbiddenError()
+
     // const response = new Responder()
 
     // const result = await User.find({})
