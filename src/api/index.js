@@ -9,7 +9,7 @@ const router = new Router({ prefix: '/v1' })
 
 router.get('/', ctx => {
   ctx.body = {
-    message: 'BiometridOn API',
+    message: 'Koa Mongoose API Boilerplate',
     version
   }
 })
