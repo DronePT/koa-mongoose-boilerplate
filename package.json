@@ -22,17 +22,17 @@
     "koa-morgan": "^1.0.1",
     "koa-router": "^7.2.1",
     "koa-server-push": "^0.1.0",
-    "mongoose": "^4.12.4",
+    "mongoose": "^5.5.14",
     "uws": "^8.14.1",
     "winston": "^2.4.0"
   },
   "devDependencies": {
-    "eslint": "^4.9.0",
+    "eslint": "^5.16.0",
     "eslint-config-standard": "^10.2.1",
     "eslint-plugin-import": "^2.8.0",
     "eslint-plugin-node": "^5.2.1",
     "eslint-plugin-promise": "^3.6.0",
     "eslint-plugin-standard": "^3.0.1",
-    "nodemon": "^1.12.1"
+    "nodemon": "^1.19.1"
   }
 }
