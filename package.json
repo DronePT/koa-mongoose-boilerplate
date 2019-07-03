@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "dev": "NODE_ENV=development nodemon ./index.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "snyk-protect": "snyk protect",
+    "prepare": "npm run snyk-protect"
   },
   "keywords": [],
   "author": "",
@@ -24,7 +26,8 @@
     "koa-server-push": "^0.1.0",
     "mongoose": "^5.5.14",
     "uws": "^8.14.1",
-    "winston": "^2.4.0"
+    "winston": "^2.4.0",
+    "snyk": "^1.189.0"
   },
   "devDependencies": {
     "eslint": "^5.16.0",
@@ -34,5 +37,6 @@
     "eslint-plugin-promise": "^3.6.0",
     "eslint-plugin-standard": "^3.0.1",
     "nodemon": "^1.19.1"
-  }
+  },
+  "snyk": true
 }
