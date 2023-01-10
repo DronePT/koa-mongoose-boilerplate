@@ -20,7 +20,7 @@
     "koa-etag": "^3.0.0",
     "koa-helmet": "^3.2.0",
     "koa-morgan": "^1.0.1",
-    "koa-router": "^7.2.1",
+    "koa-router": "^7.3.0",
     "koa-server-push": "^0.1.0",
     "mongoose": "^5.5.14",
     "uws": "^8.14.1",
