@@ -22,7 +22,7 @@
     "koa-morgan": "^1.0.1",
     "koa-router": "^7.3.0",
     "koa-server-push": "^0.1.0",
-    "mongoose": "^6.4.6",
+    "mongoose": "^8.8.3",
     "uws": "^8.14.1",
     "winston": "^2.4.0"
   },
